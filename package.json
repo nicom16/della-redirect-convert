@@ -1,0 +1,24 @@
+{
+  "name": "tg-bot-redirect-converter",
+  "version": "1.0.0",
+  "description": "Redirects easycron GET requests to Altervista and converts videos to Telegram GIFs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node src/test.js"
+  },
+  "keywords": [
+    "bot",
+    "telegram",
+    "altervista"
+  ],
+  "author": "nicom16",
+  "license": "ISC",
+  "bugs": {},
+  "dependencies": {
+    "axios": "^1.2.0",
+    "express": "^4.18.2",
+    "node-fetch": "^2.7.0",
+    "telegraf": "^4.11.2"
+  }
+}
