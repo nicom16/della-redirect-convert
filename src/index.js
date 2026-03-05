@@ -112,7 +112,7 @@ app.get('/blur', (req, res) => {
         const blurWidth = Math.ceil(width * perWidth);
         const blurHeight = Math.ceil(height * perHeight);
 
-        return promisifiedExec(`magick -limit memory 64MiB -limit map 64MiB ${picPath} -gravity SouthEast -region ${blurWidth}x${blurHeight}+0+0 -blur 0x20 ${blurredPicPath}`);
+        return promisifiedExec(`magick -limit memory 320MiB -limit map 320MiB ${picPath} -gravity SouthEast -region ${blurWidth}x${blurHeight}+0+0 -blur 0x20 ${blurredPicPath}`);
       } 
 
       // Vertical
@@ -123,7 +123,7 @@ app.get('/blur', (req, res) => {
         const blurWidth = Math.ceil(width * perWidth);
         const blurHeight = Math.ceil(height * perHeight);
 
-        return promisifiedExec(`magick -limit memory 64MiB -limit map 64MiB ${picPath} -gravity SouthEast -region ${blurWidth}x${blurHeight}+0+0 -blur 0x20 ${blurredPicPath}`);
+        return promisifiedExec(`magick -limit memory 320MiB -limit map 320MiB ${picPath} -gravity SouthEast -region ${blurWidth}x${blurHeight}+0+0 -blur 0x20 ${blurredPicPath}`);
       }
     })
     .then(() => console.log("Blurred!"))
