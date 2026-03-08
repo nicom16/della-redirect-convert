@@ -138,12 +138,14 @@ app.get('/blur', (req, res) => {
         params: {
           unique_id: req.query.unique
         }
-      })
+      });
+
+      res.send('Blurring!');
     })
-    .catch((err) => console.log(err));
-
-  res.send('Blurring!');
-
+    .catch((err) => {
+      console.log(err)
+      res.send('Blurring error!');
+    });
 });
 
 app.get('/counter', (req, res) => {
